@@ -27,10 +27,34 @@ public class ExceptionEx1 {
         }
 
     }
+    public void arithmeticExceptionExample(){
+        int []m=new int[5];
+        int result=0;
+        for (int i=0;i<5;i++){
+            try {
+                m[i] = (int) Math.random() * 100;
+                result = 100 / m[i];
+            }
+            catch (ArithmeticException e){
+
+            }catch (ArrayIndexOutOfBoundsException e){
+
+            }catch (NullPointerException e){
+
+            }catch (Exception e){
+
+            }catch (Throwable e){
+
+            }
+        }
+
+    }
     public static void main(String[] args) {
         ExceptionEx1 obj=new  ExceptionEx1();
         //obj.nullPointerExceptionExample1("SpringLesson");
-        obj.arrayIndexOutOfBoundsExceptionExample1();
+        //obj.arrayIndexOutOfBoundsExceptionExample1();
+        obj.arithmeticExceptionExample();
+
 
 
     }
