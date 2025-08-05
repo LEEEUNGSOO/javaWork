@@ -1,4 +1,4 @@
-package com.multi.object.interfaceobj;
+package com.multi.object.interfaceobj1;
 
 //Interface는 완전 추상클래스
 //속성이 final static이다

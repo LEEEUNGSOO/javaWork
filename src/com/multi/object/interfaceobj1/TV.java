@@ -1,4 +1,4 @@
-package com.multi.object.interfaceobj;
+package com.multi.object.interfaceobj1;
 
 //class(설계도,사용자정의 자료형)
 //inhertiance(상속)

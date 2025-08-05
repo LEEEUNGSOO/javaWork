@@ -1,4 +1,4 @@
-package com.multi.object.interfaceobj;
+package com.multi.object.interfaceobj1;
 
 public class ControlMain {
     public static void main(String[] args) {

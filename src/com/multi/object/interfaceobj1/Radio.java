@@ -1,4 +1,4 @@
-package com.multi.object.interfaceobj;
+package com.multi.object.interfaceobj1;
 
 public class Radio implements  RemoteControl{
 
