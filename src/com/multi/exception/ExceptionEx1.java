@@ -55,7 +55,5 @@ public class ExceptionEx1 {
         //obj.arrayIndexOutOfBoundsExceptionExample1();
         obj.arithmeticExceptionExample();
 
-
-
     }
 }
