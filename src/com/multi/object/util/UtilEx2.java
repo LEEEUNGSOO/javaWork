@@ -29,6 +29,26 @@ public class UtilEx2 {
 
 
     }
+
+    public void stringExecute4(){
+//        String string=new String("abc");
+//        string.charAt(0);
+//
+//        StringBuffer sb=new StringBuffer("abc");
+//        sb.charAt(0);
+//
+//        StringBuilder sbu=new StringBuilder("abc");
+//        sbu.charAt(0);
+
+        CharSequence cs=new String("");
+        cs.charAt(0);
+        cs=new StringBuffer("abc");
+        cs.charAt(0);
+        cs=new StringBuilder("abc");
+        cs.charAt(0);
+
+
+    }
     public static void main(String[] args) {
         UtilEx2 utilEx2=new UtilEx2();
         utilEx2.stringExecute3();
