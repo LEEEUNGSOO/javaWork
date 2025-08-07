@@ -1,6 +1,9 @@
 package com.multi.object.collection;
 
 import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
 
 public class MapEx1 {
     public void mapMethodEx1(){
@@ -9,9 +12,25 @@ public class MapEx1 {
         hashMap.put(2,"권성민");
         hashMap.put(3,"지예린");
         hashMap.put(4,"홍예린");
-        System.out.println(hashMap.toString());//toString 호출되어 문자열로 반환
-        String name= String.valueOf(hashMap.get(2).startsWith("유")).charAt(0)=='t'?"유원상":"아마나";
-        System.out.println(name);
+
+         //Set<Integer>set= hashMap.keySet();
+        // Iterator<Integer>iterator= set.iterator();
+//         while(iterator.hasNext()){
+//             int key= iterator.next();
+//             System.out.println(key+":"+hashMap.get(key));
+//         }
+
+        Iterator<Map.Entry<Integer,String>>iter= hashMap.entrySet().iterator();
+        while(iter.hasNext()){
+            Map.Entry<Integer,String>entry=iter.next();
+            System.out.println(entry.getKey()+" "+entry.getValue());
+        }
+
+
+
+//        System.out.println(hashMap.toString());//toString 호출되어 문자열로 반환
+//        String name= String.valueOf(hashMap.get(2).startsWith("유")).charAt(0)=='t'?"유원상":"아마나";
+//        System.out.println(name);
 
     }
     public static void main(String[] args) {
