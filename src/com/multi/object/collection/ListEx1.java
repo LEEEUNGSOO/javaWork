@@ -1,7 +1,6 @@
 package com.multi.object.collection;
 
-import java.util.ArrayList;
-import java.util.Iterator;
+import java.util.*;
 
 public class ListEx1 {
     //ArrayList ,Vector, Stack
@@ -25,18 +24,32 @@ public class ListEx1 {
 //        while (iter.hasNext()){
 //            System.out.println(iter.next());
 //        }
+//        새로운 반복객체가 매번 생성되어서 h만 2번 나옵니다
+//        System.out.println(list1.iterator().next());//
 //        System.out.println(list1.iterator().next());
-//        System.out.println(list1.iterator().next());
 
 
-
-
-
+    }
+    public void listExMehtod2(){
+        ArrayList<String>list1=new ArrayList<String>();
+        ArrayList<String>list2=new ArrayList<String>();
+        list1.add("Html");
+        list1.add("Java");
+        list1.add("Python");
+        list1.add("Ruby");
+        list1.add(0,"Spring");
+        list2.add("llm");
+        list2.add("rag");
+        list2.add("chain");
+        list2.add("bert");
+        //list1.clear();
+        list1.addAll(list2);
+        System.out.println(list1);
 
     }
     public static void main(String[] args) {
         ListEx1 l1 = new ListEx1();
-        l1.listExMehtod1();
+        l1.listExMehtod2();
 
 
     }
