@@ -15,7 +15,14 @@ public class BoardMain {
         in = new BufferedReader(new InputStreamReader(System.in));
         menu();
     }
-    private void searchListBySubject() throws Exception {// LIKE
+    private void searchListBySubject() throws Exception {//
+        // LIKE
+        System.out.println("검색어 입력:");
+        List<BoardDto> list = BoardServiceImpl.getBoardService().searchListBySubject(in.readLine().trim());
+        System.out.println("********** 글목록(전체) **********");
+        for(BoardDto article : list) {
+            System.out.println(article);
+        }
     }
     private void viewArticle() throws Exception {
         System.out.print("글번호 : ");
