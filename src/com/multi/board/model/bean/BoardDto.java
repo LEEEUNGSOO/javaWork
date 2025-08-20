@@ -1,6 +1,6 @@
 package com.multi.board.model.bean;
 
-
+//VO와 유사한 객체
 public class BoardDto {
     private int articleNo;
     private String subject;
