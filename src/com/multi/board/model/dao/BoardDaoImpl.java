@@ -22,7 +22,7 @@ public class BoardDaoImpl implements BoardDao {
         PreparedStatement pstmt=null;
         try {
             con= DBUtil.getInstance().getConnection();
-            StringBuilder sql=new StringBuilder("insert into board (subject,content,userid) \n");
+            StringBuilder sql=new StringBuilder("insert into board (subject,content,user_id) \n");
             con.setAutoCommit(false);
             sql.append("values (?,?,?)");
             pstmt=con.prepareStatement(sql.toString());
@@ -130,11 +130,11 @@ public class BoardDaoImpl implements BoardDao {
             rs = pstmt.executeQuery();
             if(rs.next()) {
                 boardDto = new BoardDto();
-                boardDto.setArticleNo(rs.getInt("articleno"));
+                boardDto.setArticleNo(rs.getInt("article_no"));
                 boardDto.setSubject(rs.getString("subject"));
                 boardDto.setContent(rs.getString("content"));
-                boardDto.setUserId(rs.getString("userid"));
-                boardDto.setRegisterTime(rs.getString("registertime"));
+                boardDto.setUserId(rs.getString("user_id"));
+                boardDto.setRegisterTime(rs.getString("register_time"));
             }
         } catch (SQLException e) {
             e.printStackTrace();
